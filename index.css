@@ -25,67 +25,55 @@
     color: #FAFAFA;
 }
 .nav{
-    width:80%;
-    height: 5rem;
+    width: 80%;
+    height: 70px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    
 }
 .left-navbar{
     width: 25%;
-    height: 95%;
-    display: flex;
-    justify-content: left;
-    align-items: center;    
-}
-.name{
-    font-family: Montserrat;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 30px;
-    letter-spacing: 0.10000000149011612px;
+    font-size: 1.4rem;
 }
 .right-navbar{
-    width: 65%;
-    height: 95%;
+    width: 70%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 1.2rem;
 }
 .left-nav{
-    width: 70%;
-    height: 95%;
-    align-items: center;
+    width:70%;
     display: flex;
+    align-items: center;
+}
+.right-nav{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 30px;
 }
 .left-nav ul{
     display: flex;
-    justify-content: space-between;
+    gap: 3rem;
 }
 .left-nav ul li{
     list-style: none;
 }
 .left-nav ul li a{
     text-decoration: none;
-    color:#FAFAFA;
+    color: #FAFAFA;
+
 }
-.right-nav{
-    width: 25%;
-    height: 95%;
-    gap:45px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;    
+.left-nav ul li a:hover{
+    color: #FF6551;
 }
 .login-but{
-    width: 3re;
-    height: 2rem ;
-    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    background-color: #FF6551;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FF6551;
+    border-radius: 5px;
 }
 .container-fluid{
     width: 80%;
@@ -97,72 +85,54 @@
     justify-content: center;
 }
 .box{
-    width: Fixed (699px);
-    height: Hug (496px);
-    padding: 40px 0px 40px 0px;
+    width: 100%;
+    height: 25rem;
     gap: 40px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-.box-head{
-    width: 77px;
-    height: 24px;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.10000000149011612px;
-    text-align: left;
+.h1{
+    font-size: 1.5rem;
 }
-.box-head2{
-    width: 542px;
-    height: 160px;
-    font-family: Montserrat;
-    font-size: 58px;
-    font-weight: 700;
-    line-height: 80px;
-    letter-spacing: 0.20000000298023224px;
-    text-align: center;
+.h2{
+    font-size: 3rem;
 }
-.box-head3{
-    width: 513px;
-    height: 60px;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0.20000000298023224px;
-    text-align: center;
-    
+.h3{
+    font-size: 1rem;
 }
-.content-box{
-    
-    width: 1,050px;
-    height: 834px;
-    left: 195px;
-    gap: 80px;
 
+.content-box{
+    width: 80%;
+    padding: 5rem 0;
+    left: 195px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 }
 .content{
-    width: Hug (1,045px);
-    height: Hug (300px);
-    gap: 30px;
-    padding: 160px 0px ;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 }
 .grid{
     display: flex;
 }
 .card{
-    width:  328px;
-    height: 300px;
+    width:  30%;
+    height: 15rem;
     padding: 35px 40px 35px 40px;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     box-shadow: 0px 13px 19px 0px #00000012;
 }
 .line{
-    width: 50px;
+    width: 70px;
     height: 2px;
     background-color: #FF6551;
 }
@@ -184,6 +154,7 @@
     justify-content: center;
     flex-direction: column;
     color: #FAFAFA;
+    gap:30px ;
 }
 .vid{
     width:45%;
@@ -195,4 +166,60 @@
     justify-content: center;
     align-items: center;
 }
-
+.main-head{
+    color: #FF6551;
+}
+.icon-bg{
+    width: 50px;
+    height: 50px;
+    background-color: #26335D;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid1{
+    width: 80%;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box1{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+}
+.box1 img{
+    width: 20rem;
+}
+@media only screen and (max-width: 1100px){
+    .content-box{
+        width: 95%;
+    }
+    .grid{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        min-width: 15rem;
+    }
+    .grid1{
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+    .box1{
+        width: 100%;
+    }
+    .vid-con{
+        flex-direction: column;
+    }
+    .left-con,.vid{
+        width: 90%;
+    }
+}
