@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
 }
-
+body{
+    font-family: 'Montserrat';
+}
 .container{
     width: 100%;
-    height: 100%;
     position: relative;
-    font-family: 'Montserrat';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,14 +25,24 @@
     color: #FAFAFA;
 }
 .nav{
+    position: relative;
     width: 80%;
-    height: 70px;
+    padding: 20px 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .left-navbar{
     width: 25%;
     font-size: 1.4rem;
+    position: relative;
+}
+.name{
+    font-weight: 700;
+}
+.name:hover{
+    color: #FF6551;
+    font-size: 1.6rem;
 }
 .right-navbar{
     width: 70%;
@@ -66,6 +76,11 @@
 .left-nav ul li a:hover{
     color: #FF6551;
 }
+.right-nav div,.box div{
+    width: 110px;
+    height: 50px;
+    
+}
 .login-but{
     width: 100px;
     height: 40px;
@@ -75,18 +90,22 @@
     align-items: center;
     border-radius: 5px;
 }
+.login-but:hover{
+    width: 110px;
+    height: 50px;
+    background-color: #FAFAFA;
+    color: #FF6551;
+}
 .container-fluid{
     width: 80%;
-    height: 100%;
     top: 91px;
     left: 195px;
-    padding: 112px 0px 112px 0px;
+    padding: 70px 0px;
     display: flex;
     justify-content: center;
 }
 .box{
     width: 100%;
-    height: 25rem;
     gap: 40px;
     display: flex;
     justify-content: center;
@@ -102,7 +121,23 @@
 .h3{
     font-size: 1rem;
 }
-
+.burger{
+    width: 50px;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+}
+.burger div{
+    display: none;
+    flex-direction: column;
+    gap:10px;
+}
+.line1{
+    width: 50px;
+    height: 5px;
+    background-color: #FAFAFA;
+    border-radius: 2px;
+}
 .content-box{
     width: 80%;
     padding: 5rem 0;
@@ -124,10 +159,11 @@
 }
 .card{
     width:  30%;
-    height: 15rem;
+    height: 17rem;
     padding: 35px 40px 35px 40px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 20px;
     box-shadow: 0px 13px 19px 0px #00000012;
 }
@@ -142,7 +178,6 @@
 }
 .vid-con{
     width: 100%;
-    height: Hug (363px);
     gap: 30px;
     display: flex;
     justify-content: space-between;
@@ -158,25 +193,47 @@
 }
 .vid{
     width:45%;
-    height:363px;
     gap: 30px;
-    background-image: url(./img/features-11-video-thumb.png);
     border-radius: .3rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.vid video{
+    position: relative;
+}
+.vid img{
+    position: absolute;
+}
 .main-head{
     color: #FF6551;
 }
 .icon-bg{
-    width: 50px;
-    height: 50px;
-    background-color: #26335D;
+    width: 70px;
+    height: 76px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.max{
+    font-weight: 700;
+    line-height: 50px;
+    font-size:40px;
+}
+.min{
+    font-weight: 400;
+    line-height: 20px;
+    font-size:14px;
+}
+.icon1{
+    background-color: #B6D7FF;
+}
+.icon2{
+    background-color: #DDEEFE;
+}
+.icon3{
+    background-color: #F9FDFF;
 }
 .grid1{
     width: 80%;
@@ -192,19 +249,68 @@
     justify-content: center;
     gap:20px;
 }
+.box2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
 .box1 img{
     width: 20rem;
 }
 @media only screen and (max-width: 1100px){
+    .nav{
+        width:90%;
+        flex-direction: column;
+        gap:30px;
+    }
+    .name{
+        font-size:1rem ;
+    }
+    .name:hover{
+        font-size:1.2rem;
+    }
+    .burger div{
+        display: flex;
+    }
+    .left-navbar{
+        width: 100%;
+        position: relative;
+    }
+    .right-navbar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+    }
+    .h1{
+        font-size: 1.2rem;
+    }
+    .h2{
+        font-size: 1.8rem;
+    }
+    .h3{
+        font-size: .8rem;
+    }
+    .hide{
+        display: none;
+    }
+    .content{
+        width: 90%;
+    }
     .content-box{
-        width: 95%;
+        width: 90%;
     }
     .grid{
         flex-direction: column;
         align-items: center;
     }
     .card{
-        min-width: 15rem;
+        width: 90%;
+        min-width: 20rem;
+        padding: 25px 30px;
     }
     .grid1{
         width: 90%;
@@ -221,5 +327,114 @@
     }
     .left-con,.vid{
         width: 90%;
+    }
+    .left-nav{
+        align-items: center;
+        justify-content: center;
+    }
+    .left-nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .right-nav{
+        width: 100%;
+        justify-content: center;
+    }
+    .box1 img{
+        width: 15rem;
+    }
+    .container-fluid{
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 500px){
+    .nav{
+        width:95%;
+        flex-direction: column;
+        gap:30px;
+    }
+    .burger{
+        position: absolute;
+        top:12px;
+        right: 0;
+    }
+    .burger div{
+        display: flex;
+        gap:8px
+    }
+    .left-navbar{
+        width: 100%;
+        position: relative;
+    }
+    .right-navbar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+    }
+    .hide{
+        display: none;
+    }
+    .content-box{
+        width: 95%;
+    }
+    .h1{
+        font-size: .7rem;
+    }
+    .h2{
+        font-size: .9rem;
+    }
+    .h3{
+        font-size: .6rem;
+    }
+    .grid{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 90%;
+        min-width: 9rem;
+        padding: 20px 25px;
+    }
+    .grid1{
+        width: 95%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+    .box1{
+        width: 100%;
+    }
+    .vid-con{
+        width: 100%;
+        flex-direction: column;
+    }
+    .left-con,.vid{
+        width: 95%;
+    }
+    .left-nav{
+        align-items: center;
+        justify-content: center;
+    }
+    .left-nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .right-nav{
+        width: 100%;
+        justify-content: center;
+    }
+    .box1 img{
+        width: 10rem;
+    }
+    .box1 img{
+        width: 5rem;
+    }
+    .line1{
+        width: 40px;
+    }
+    .container-fluid{
+        width: 95%;
     }
 }
